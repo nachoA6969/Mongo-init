@@ -1,0 +1,27 @@
+use("platzi_store");
+
+db.products.drop(); //esto borra TODA LA COLECCION
+
+db.products.insertMany([
+  {
+    _id: 1,
+    name: "Product 1",
+    price: 100,
+  },
+  {
+    _id: 2,
+    name: "Product 2",
+    price: 1200,
+  },
+  {
+    _id: 3,
+    name: "Product 3",
+    price: 1300,
+  },
+  ,
+  {
+    ordered: false, //Con esta instrucción, le decimos a Mongo que si hay un problema de duplicidad, solo deje estos documentos fuera y que continue con la inserción de datos.
+  },
+]);
+
+db.products.find();

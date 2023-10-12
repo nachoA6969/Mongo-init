@@ -1,0 +1,9 @@
+use("platzi_store");
+//---
+db.categories.find().skip(1).limit(2);
+//--------
+// sort sirve para organizar los documentos ASC o DESC
+// "1" organiza los datos ASC
+// "-1" organiza los datos DESC
+// limit : seria como el top en SQL server
+// projection son las variables a visualizar

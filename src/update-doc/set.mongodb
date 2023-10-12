@@ -1,0 +1,15 @@
+use("platzi_store");
+
+db.products.updateOne(
+  //query identifico el documento
+  { _id: 2 },
+  //change  => operators
+  {
+    //operador set
+    $set: {
+      name: "Change name",
+      price: 3000,
+      tags: ["A", "B", "C"],
+    },
+  }
+);

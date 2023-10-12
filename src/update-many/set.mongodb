@@ -1,0 +1,41 @@
+use("sample_training");
+
+// db.zips.updateMany(
+//   //query identifico el documento
+//   { city: "CLEVELAND" },
+//   //change  => operators
+//   {
+//     //operador set
+//     $set: {
+//       myAttr: "hola",
+//     },
+//   }
+// );
+
+//--------------RENAME
+
+// db.zips.updateMany(
+//   //query identifico el documento
+//   { city: "CLEVELAND" },
+//   //change  => operators
+//   {
+//     //operador set
+//     $rename: {
+//       myAttr: "my_data",
+//     },
+//   }
+// );
+
+//------------------(borrar)------UNSET
+
+db.zips.updateMany(
+  //query identifico el documento
+  { city: "CLEVELAND" },
+  //change  => operators
+  {
+    //operador set
+    $unset: {
+      my_data: "",
+    },
+  }
+);

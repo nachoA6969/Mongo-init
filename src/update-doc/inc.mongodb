@@ -1,0 +1,13 @@
+use("platzi_store");
+
+db.products.updateOne(
+  //query identifico el documento
+  { _id: 2 },
+  //change  => operators
+  {
+    //operador lo encrementa a su precio base no modifica el total
+    $inc: {
+      price: 300,
+    },
+  }
+);
